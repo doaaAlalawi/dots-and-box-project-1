@@ -10,3 +10,14 @@
   {
       text-align: center;
   }
+
+svg 
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body
+{
+    background-color: beige
+}
