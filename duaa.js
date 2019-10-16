@@ -5,6 +5,7 @@ let player1 = [null, ];
 let player2 = [];
 let play = [,];
 let noRepet =[]
+
 $("line").click(function(e) {
   if ($(this).attr("style") === "stroke: white;") {
     // player 1 ya doaa
@@ -13,16 +14,13 @@ $("line").click(function(e) {
         .attr("style", "stroke: red")
         play.push(this.id)
         flag = !flag
-
     } 
     // player 2 
     else {
         $(this).attr("class", "click")
         .attr("style", "stroke: green")
         play.push(this.id)
-
         flag = !flag
-
     }
     // end of players
     win(play ,noRepet)

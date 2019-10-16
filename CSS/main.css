@@ -6,18 +6,52 @@
   justify-content: center;
   margin-bottom: 50px;
   }
+
   header
   {
-      text-align: center;
+    text-align: center;
   }
 
 svg 
 {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
 }
-
+#startPage
+{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+#game
+{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
 body
 {
-    background-color: beige
+    background-color: bisque;
+}
+
+input
+{
+    border-radius: 12px;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    width: 250px;
+    display: inline;
+    position: absolute;
+}
+input:hover {background-color: #df9696}
+input:active {
+  background-color: #df9696;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+button{
+    
 }
