@@ -29,25 +29,64 @@ svg
     display: flex;
     margin: 0 auto;
     justify-content: center;
+   
 }
 body
 {
     background-color: bisque;
 }
+p{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 10%;
+}
 
 input
 {
-    border-radius: 12px;
+    border-radius: 9px;
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     text-align: center;
-    width: 250px;
+    width: 310px;
+    height: 32px;
     display: inline;
     position: absolute;
-}
-input:hover {background-color: #df9696}
+    background-color: #CCCCCC;
+    margin-top: 1%;
+    margin-bottom: 14%;
+    
+ }
 input:active {
-  background-color: #df9696;
+  background-color: #999999;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#player1{
+    position: absolute;
+    top: 186px;
+    left : 237px ;
+    color: #df9696;
+}
+#player2{
+    position: absolute;
+    top: 253px;
+    left : 237px ;
+    color: #996666;
+}
+#score1
+{
+    position: absolute;
+    top: 190px;
+    left : 393px ;
+    color: #df9696;
+}
+
+#score2
+{
+    position: absolute;
+    top: 256px;
+    left : 395px ;
+    color: #996666;
 }

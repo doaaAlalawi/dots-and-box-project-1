@@ -1,16 +1,20 @@
-
 $("#game").hide();
-$("#StartButton").click(function () {
-    $("#startPage").hide();
-     $("#game").show();
+$("#StartButton").click(function() {
+  $("#startPage").hide();
+  $("#game").show();
 });
+
+$("#ResetButton").click(function() {
+     document.location.reload(true);
+});
+
 
 var svg = d3
   .select("#game")
   .append("svg")
   .attr("width", 800)
-  .attr("height", 800)
- 
+  .attr("height", 800);
+
 let CiecleId = 1;
 let lineIdx = 1;
 let lineIdy = 1;
@@ -27,13 +31,13 @@ for (let i = 1; i < 8; i++) {
       .attr("y2", 100 * i)
       .attr("stroke-width", 7)
       .attr("id", "X_" + lineIdx)
-      .attr("class" , "te")
-   lineIdx ++;
+      .attr("class", "te");
+    lineIdx++;
   }
   lineIdx++;
 }
 // drow the virtical line
-for (let i = 1; i <7; i++) {
+for (let i = 1; i < 7; i++) {
   for (let j = 1; j < 8; j++) {
     svg
       .append("line") // attach a line
@@ -44,152 +48,111 @@ for (let i = 1; i <7; i++) {
       .attr("y2", 100 * i + 100)
       .attr("stroke-width", 7)
       .attr("id", "Y_" + lineIdy)
-      .attr("class" , "te")
+      .attr("class", "te");
     lineIdy++;
   }
-
 }
 // drow the circle
-for (let i = 1; i < 8; i++) {
+for (let i = 1; i < 7; i++) {
   for (let j = 1; j < 8; j++) {
     svg
       .append("circle")
       .attr("cx", 100 * j)
       .attr("cy", 100 * i)
       .attr("r", 7)
-      .style("fill", "purple")
-      .attr("id", CiecleId)
+      .style("fill", "#666666")
+      .attr("id", CiecleId);
     CiecleId++;
   }
 }
 
 var flag = true;
-let player1 = [];
-let player2 = [];
 let play = [];
-let noRepet =[];
-let L 
+let noRepet = [];
+let scoreplyer1 = 0
+let scoreplyer2 = 0
+let box = 0 
 
 $("line").click(function(e) {
   if ($(this).attr("style") === "stroke: bisque;") {
-    // player 1 ya doaa
+    // player 1 
     if (flag) {
-        $(this).attr("class", "click")
-        .attr("style", "stroke: red")
-        play.push(this.id)
-        flag = !flag
-        L = this
-    } 
-    // player 2 
+      $(this)
+        .attr("class", "click")
+        .attr("style", "stroke: #df9696");
+      play.push(this.id);
+      flag = !flag;
+    }
+    // player 2
     else {
-        $(this).attr("class", "click")
-        .attr("style", "stroke: green")
-        play.push(this.id)
-        flag = !flag
+      $(this)
+        .attr("class", "click")
+        .attr("style", "stroke: #996666");
+      play.push(this.id);
+      flag = !flag;
     }
     // end of players
-    win(play ,noRepet,L)
+    win(play, noRepet);
   }
 });
 
-function win (play , noRepet , l)  {
-    play.forEach ( element => {
-        let x = element
-        let $x = x.split("_")
-        let $$x = Number($x[1])
-       if (!noRepet.includes(x)){
-        if ($x[0] === "X" && play.includes("X_"+($$x+7)))
-        { 
-            if (play.includes("Y_"+$$x) && play.includes("Y_"+(($$x+1))))
-            { 
-                if (flag){
-                    boxL("green" ,"G", l)
-                    player1.push(element)
-                }
-                else
-                {
-                    boxL("red" , "R",l)
+function win(play, noRepet) {
+  play.forEach(element => {
+    let x = element;
+    let $x = x.split("_");
+    let $$x = Number($x[1]);
+    if (!noRepet.includes(x)) {
+      if ($x[0] === "X" && play.includes("X_" + ($$x + 7))) {
+        if (play.includes("Y_" + $$x) && play.includes("Y_" + ($$x + 1))) {
+          var xaxis = $(`#${x}`).attr("x1")
+          var yaxis = $(`#${x}`).attr("y1")
 
-                    player2.push(element)
-                }
-                noRepet.push(x)
-                flag = !flag
-            }
+          svg
+            .append("text")
+            .style("font-size", "40px")
+            .attr("x", Number(xaxis) + 22)
+            .attr("y", Number(yaxis )+ 58)
+            .text( function(){ let color = flag ? "℘2" : "℘1"
+            flag ? scoreplyer2++ : scoreplyer1++
+            $('#score2').text(scoreplyer2)
+            $('#score1').text(scoreplyer1)
+            return color })
+            .style("fill", function(){ let color = flag ? "#996666" : "#df9696"
+            return color });
+          noRepet.push(x);
+          box++
+          flag = !flag;
         }
+      }
     }
-    })
-}
-
-function boxL (x,y,l)
- {  
-// console.log(l.id)
-// console.log(d3.select("#".concat(l.id)).attr("x1"))
-//console.log("y1 = "+d3.select("#".concat(l.id)).att("y1"))
-
-    let xline = Number(d3.select("#".concat(l.id)).attr("x1"))
-    let yline = Number(d3.select("#".concat(l.id)).attr("y1"))
-    // console.log(xline+10)
-    // console.log(yline+35)
-
-    // var odd = 0 
-    // function u (){
-    //     let x = l.id
-    //     let $x = x.split("_")
-    //     let $$x = Number($x[1])
-    //     if (!$$x % 2 == 0 ) odd = yline+35
-    // } u ()
-
-    //console.log(y)
-    // console.log(odd)
-    svg.append("text")
-    .style("font-size","34px")
-    .attr("x",(xline+10))
-    .attr("y",(yline+35))
-    .text(y)
-    .style("fill",x)
-}
-
-
-// reset button 
-$("#ResetButton").click(function () {
-    play.forEach(element => {
-      d3.select("#".concat(element)).attr("style", "stroke: bisque")
-    });
-});
-
-
-// to check the final winner 
-play.forEach(element => {
-    if ($(element).attr("style") != "stroke: bisque;")
-    winner ()
-});
-function finalWinner ()
-{
-    if (player1.length > player2.length)
+    if (box == 30)
+    {
+         if(scoreplyer2 > scoreplyer1)
     Swal.fire({
-        type: "‘success’",
-        title: "player1 win",
-        showConfirmButton: false,
-        timer: 1500
+      type: "‘success’",
+      title: "player 2 won",
+      showConfirmButton: false,
+      timer: 1500
     });
-     else {
+  else if(scoreplyer2 < scoreplyer1){
+    Swal.fire({
+      type: "‘success’",
+      title: "player 1 won",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
+    else 
+    {
         Swal.fire({
             type: "‘success’",
-            title: "player2 win",
+            title: "evenness",
             showConfirmButton: false,
             timer: 1500
-        });
-     }
-}
-
-var svg2 = d3
-  .select("#score")
-  .append("svg2")
-  .attr("width", 500)
-  .attr("height", 500)
-
-  svg2 
-  .append ("text")
+          });
+    }
+  }
+    
+    });  
   
-
-
+}
