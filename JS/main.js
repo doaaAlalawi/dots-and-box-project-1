@@ -8,7 +8,6 @@ $("#ResetButton").click(function() {
      document.location.reload(true);
 });
 
-
 var svg = d3
   .select("#game")
   .append("svg")
@@ -96,6 +95,7 @@ $("line").click(function(e) {
   }
 });
 
+// determaind the winner 
 function win(play, noRepet) {
   play.forEach(element => {
     let x = element;
@@ -107,6 +107,7 @@ function win(play, noRepet) {
           var xaxis = $(`#${x}`).attr("x1")
           var yaxis = $(`#${x}`).attr("y1")
 
+          // appending the text in the box 
           svg
             .append("text")
             .style("font-size", "40px")
@@ -125,6 +126,8 @@ function win(play, noRepet) {
         }
       }
     }
+
+    // check if the bord is fill to find the final winner 
     if (box == 30)
     {
          if(scoreplyer2 > scoreplyer1)
@@ -132,14 +135,14 @@ function win(play, noRepet) {
       type: "‘success’",
       title: "player 2 won",
       showConfirmButton: false,
-      timer: 1500
+      timer: 2000
     });
   else if(scoreplyer2 < scoreplyer1){
     Swal.fire({
       type: "‘success’",
       title: "player 1 won",
       showConfirmButton: false,
-      timer: 1500
+      timer: 2000
     });
   }
     else 
@@ -148,11 +151,10 @@ function win(play, noRepet) {
             type: "‘success’",
             title: "evenness",
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
           });
     }
   }
-    
     });  
   
 }
