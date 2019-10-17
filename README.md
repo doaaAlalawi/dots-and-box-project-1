@@ -1,6 +1,7 @@
 # Dots & Boxes
 
-𝚃𝚑𝚎 𝚊𝚒𝚖  𝚘𝚏 𝚝𝚑𝚒𝚜 𝚐𝚊𝚖𝚎 𝚒𝚜 𝚌𝚘𝚖𝚙𝚕𝚎𝚝𝚎 𝚋𝚘𝚡𝚎𝚜 ๓໐rē 𝚝𝚑𝚊𝚗 𝚢𝚘𝚞𝚛 𝚘𝚙𝚙𝚘𝚗𝚎𝚗𝚝.𝚈𝚘𝚞 𝚊𝚗𝚍 𝚢𝚘𝚞𝚛 𝚘𝚙𝚙𝚘𝚗𝚎𝚗𝚝 𝚝𝚊𝚔𝚎 𝚒𝚝 𝚒𝚗 𝚝𝚞𝚛𝚗𝚜 𝚝𝚘 𝚌𝚘𝚗𝚗𝚎𝚌𝚝 𝚞𝚙 𝚝𝚠𝚘 𝚊𝚍𝚓𝚊𝚌𝚎𝚗𝚝 𝚍𝚘𝚝𝚜 𝚠𝚒𝚝𝚑 𝚊 𝚕𝚒𝚗𝚎. 𝚊𝚗𝚢 𝚙𝚕𝚊𝚢𝚎𝚛 𝚌𝚕𝚘𝚜𝚎  𝚝𝚑𝚎 𝚋𝚘𝚡 𝚝𝚑𝚎𝚢 𝚖𝚞𝚜𝚝 𝚖𝚊𝚔𝚎 𝚊𝚗𝚘𝚝𝚑𝚎𝚛 𝚖𝚘𝚟𝚎 𝚊𝚗𝚍 𝚐𝚎𝚝 𝟷 𝚙𝚘𝚒𝚗𝚝.
+It’s a 2 player game, the objective of this game is  to 𝚌𝚘𝚖𝚙𝚕𝚎𝚝𝚎 the highes number of boxes. 
+It’ played in a way of 𝚌𝚘𝚗𝚗𝚎𝚌𝚝ing 𝚞𝚙 𝚝𝚠𝚘 𝚊𝚍𝚓𝚊𝚌𝚎𝚗𝚝 𝚍𝚘𝚝𝚜 𝚠𝚒𝚝𝚑 𝚊 𝚕𝚒𝚗𝚎 to create the boxes. So, if one of the 𝚙𝚕𝚊𝚢𝚎𝚛 make line that close 𝚝𝚑𝚎 𝚋𝚘𝚡 𝚝𝚑𝚎𝚢 can 𝚖𝚊𝚔𝚎 𝚊𝚗𝚘𝚝𝚑𝚎𝚛 𝚖𝚘𝚟𝚎 𝚊𝚗𝚍 𝚐𝚎𝚝 𝟷 𝚙𝚘𝚒𝚗𝚝
 
 ## Description
 
