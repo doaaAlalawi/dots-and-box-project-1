@@ -1,23 +1,8 @@
-#head
-  {
-  padding: 30px 40px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  }
-
   header
   {
     text-align: center;
   }
 
-svg 
-{
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-}
 #startPage
 {
     display: flex;
@@ -55,9 +40,22 @@ input
     background-color: #CCCCCC;
     margin-top: 1%;
     margin-bottom: 14%;
-    
+
  }
-input:active {
+ button{
+    border-radius: 9px;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    width: 310px;
+    height: 32px;
+    display: inline;
+    position: absolute;
+    background-color: #CCCCCC;
+    margin-top: 1%;
+    margin-bottom: 14%;
+}
+button:active {
   background-color: #999999;
   box-shadow: 0 5px #666;
   transform: translateY(4px);

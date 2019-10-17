@@ -4,7 +4,7 @@
 
 ## Description
 
-this project about a beautiful game that we used to play it when we was younger in school 
+this project about a beautiful game that we used to play when we was younger in school 
 
 ### Technical Used
 
@@ -36,7 +36,9 @@ this project about a beautiful game that we used to play it when we was younger 
 
 ### Unsolved problems
 
-nothing is unsolved but I want to add AI in the game in future 
+- Add AI algorithem to play with the computer 
+- let the player enter name  
+- animate the line 
 
 ## Acknowledgments
 
