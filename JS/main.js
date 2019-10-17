@@ -149,7 +149,7 @@ function win(play, noRepet) {
     {
         Swal.fire({
             type: "‘success’",
-            title: "evenness",
+            title: "Draw!",
             showConfirmButton: false,
             timer: 2000
           });
